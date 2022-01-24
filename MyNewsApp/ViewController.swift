@@ -105,7 +105,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 cell!.detailTextLabel?.text = " "
             }
         }
-        return cell!
+        return cell! 
         }
     
     }
