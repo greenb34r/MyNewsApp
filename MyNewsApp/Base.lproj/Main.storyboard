@@ -37,6 +37,10 @@
                             <constraint firstAttribute="trailing" secondItem="B8s-hQ-9eo" secondAttribute="trailing" id="zwT-LF-ehc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newsFeedView" destination="B8s-hQ-9eo" id="elc-xv-lc4"/>
+                        <outlet property="searchBar" destination="Ix6-cM-RNy" id="fel-7t-QAX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
