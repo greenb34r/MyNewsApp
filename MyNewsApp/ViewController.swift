@@ -59,8 +59,31 @@ extension ViewController: UISearchBarDelegate {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       // newsFeedView.sectionHeaderHeight = 50.0
+        return "TOTAL RESULTS: \(totalResults ?? 0)"
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        let myLabel = UILabel()
+        myLabel.frame = CGRect(x: 90, y: 0, width: 320, height: 20)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        myLabel.textColor = .black
+        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+        let headerView = UIView()
+        headerView.addSubview(myLabel)
+        headerView.backgroundColor = .white
+
+
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return self.allArticles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
