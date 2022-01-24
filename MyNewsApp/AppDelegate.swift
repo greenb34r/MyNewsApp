@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyNewsApp
 //
-//  Created by Алексей Матвеев on 24.01.2022.
+//  Created by Greenb34r on 24.01.2022.
 //
 
 import UIKit
