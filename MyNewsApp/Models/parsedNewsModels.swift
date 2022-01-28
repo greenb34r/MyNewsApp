@@ -20,7 +20,7 @@ class NewsListItem: Identifiable, Codable {
     
     var title: String?
     var description: String?
-//    var url: String?
+    var url: String?
 //    var urlToImage: String?
     
     enum CodingKeys: String, CodingKey {

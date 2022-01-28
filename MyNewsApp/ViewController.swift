@@ -71,7 +71,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
         let myLabel = UILabel()
         myLabel.frame = CGRect(x: 90, y: 0, width: 320, height: 20)
-        myLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        myLabel.font = UIFont.boldSystemFont(ofSize: 14)
         myLabel.textColor = .black
         myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
         let headerView = UIView()
