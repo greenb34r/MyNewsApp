@@ -27,9 +27,13 @@ class AddSourceViewController: UIViewController {
     
     @IBAction func addNewSourceButton(_ sender: Any) {
         if !sourceNameTextField.text!.isEmpty && !urlRssTextField.text!.isEmpty {
-            RssSources.shared.saveSource(sourceName: sourceNameTextField.text!, urlRss: urlRssTextField.text!)
-            self.navigationController?.popToRootViewController(animated: true)
+            if urlRssTextField.text?.range(of: #"(^https?:\/\/)"#, options: .regularExpression) != nil {
+                RssSources.shared.saveSource(sourceName: sourceNameTextField.text!, urlRss: urlRssTextField.text!)
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+
         }
     }
     
 }
+

@@ -33,8 +33,10 @@ class EditSourceViewController: UIViewController {
     
 
     @IBAction func editSourceButtom(_ sender: Any) {
-        RssSources.shared.editSource(indexPath: AllSourcesViewController.indexPath!, sN: editSourceNameTextField.text!, uR: editUrlRssTextField.text!)
-        self.navigationController?.popViewController(animated: true)
+        if editUrlRssTextField.text?.range(of: #"(^https?:\/\/)"#, options: .regularExpression) != nil {
+            RssSources.shared.editSource(indexPath: AllSourcesViewController.indexPath!, sN: editSourceNameTextField.text!, uR: editUrlRssTextField.text!)
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func deleteSourceButtom(_ sender: Any) {
