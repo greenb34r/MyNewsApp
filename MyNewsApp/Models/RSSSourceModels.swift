@@ -45,9 +45,13 @@ class RssSources {
     
     func editSource(indexPath: Int, sN: String, uR: String) -> Void {
         sources.remove(at: indexPath)
-        var tmp = UserSource(sourceName: sN, urlRss: uR)
+        let tmp = UserSource(sourceName: sN, urlRss: uR)
         sources.insert(tmp, at: indexPath)
         defaults.synchronize()
+    }
+    
+    func getAllSources() -> [UserSource] {
+        return sources
     }
     
 }
