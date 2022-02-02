@@ -18,7 +18,7 @@ class RssSources {
         var urlRss: String
     }
     
-    public var sources: [UserSource] {
+    var sources: [UserSource] {
         get {
             if let data = try? defaults.value(forKey: "sources") as? Data {
                 return try! PropertyListDecoder().decode([UserSource].self, from: data)

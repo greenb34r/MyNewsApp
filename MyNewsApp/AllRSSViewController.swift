@@ -11,54 +11,40 @@ import UIKit
 
 
 class AllRSSViewController: UIViewController {
-    
-    var allSources = RssSources.shared.getAllSources()
-    var rssItems: [RSSItem]?
+    var initAdd: () = ListItemsForRssHandler.shared.addToList()
+    var allRssItems: [ListItemsForRss] = ListItemsForRssHandler.shared.getToList()
     @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //DispatchQueue.main.async {
-        self.allSources = RssSources.shared.getAllSources()
-        self.tableView.reloadData()
-        //}
+        ListItemsForRssHandler.shared.addToList()
+        allRssItems = ListItemsForRssHandler.shared.getToList()
+        tableView.reloadData()
     }
-    
 
-    
-    func fetchData() {
-        let feedParser = FeedParser()
-        feedParser.parseFeed(url: "https://") {(rssItems) in
-            self.rssItems = rssItems
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
 }
 
 
 
 extension AllRSSViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.allSources.count
+        return allRssItems.count
     }
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.allSources[section].sourceName
+        return allRssItems[section].nameSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.rssItems?.count ?? 0
+        return allRssItems[section].listItems.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,11 +53,9 @@ extension AllRSSViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! RSSFeedTableViewCell
-        cell.titleTextLabel.text = self.rssItems![indexPath.row].title
-        cell.descriptionTextLabel.text = self.rssItems![indexPath.row].description
-        cell.datePubTextLabel.text = self.rssItems![indexPath.row].pubDate
+        cell.titleTextLabel.text = self.allRssItems[indexPath.section].listItems[indexPath.row].title
+        cell.descriptionTextLabel.text = self.allRssItems[indexPath.section].listItems[indexPath.row].description
+        cell.datePubTextLabel.text = self.allRssItems[indexPath.section].listItems[indexPath.row].pubDate
         return cell
     }
-    
-    
 }

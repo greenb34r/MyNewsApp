@@ -15,7 +15,8 @@ struct RSSItem {
 }
 
 class FeedParser: NSObject, XMLParserDelegate {
-    private var rssItems: [RSSItem] = []
+    static var shared = FeedParser()
+    var rssItems: [RSSItem] = []
     private var currentElement = ""
     private var currentTitle: String = "" {
         didSet {
@@ -55,7 +56,6 @@ class FeedParser: NSObject, XMLParserDelegate {
             let parser = XMLParser(data: data)
             parser.delegate = self
             parser.parse()
-            print(data)
         }
         task.resume()
     }
