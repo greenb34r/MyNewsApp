@@ -36,6 +36,7 @@ class EditSourceViewController: UIViewController {
         if editUrlRssTextField.text?.range(of: #"(^https?:\/\/)"#, options: .regularExpression) != nil {
             RssSources.shared.editSource(indexPath: AllSourcesViewController.indexPath!, sN: editSourceNameTextField.text!, uR: editUrlRssTextField.text!)
             self.navigationController?.popViewController(animated: true)
+            
         }
     }
     

@@ -12,7 +12,6 @@ import UIKit
 
 class AllRSSViewController: UIViewController {
     
-    
     var allSources = RssSources.shared.getAllSources()
     var rssItems: [RSSItem]?
     @IBOutlet weak var tableView: UITableView!
@@ -22,9 +21,17 @@ class AllRSSViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         fetchData()
-
-
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //DispatchQueue.main.async {
+        self.allSources = RssSources.shared.getAllSources()
+        self.tableView.reloadData()
+        //}
+    }
+    
+
     
     func fetchData() {
         let feedParser = FeedParser()

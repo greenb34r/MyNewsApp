@@ -14,9 +14,10 @@
 		C46D17EC279E90F90099C2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46D17EB279E90F90099C2FB /* Assets.xcassets */; };
 		C46D17EF279E90F90099C2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D17ED279E90F90099C2FB /* LaunchScreen.storyboard */; };
 		C46D17FB279E93BB0099C2FB /* parsedNewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D17FA279E93BB0099C2FB /* parsedNewsModels.swift */; };
-		C4A564B927A803B5007EE95E /* rssModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A564B827A803B5007EE95E /* rssModel.swift */; };
+		C4A564B927A803B5007EE95E /* XMLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A564B827A803B5007EE95E /* XMLModel.swift */; };
 		C4A564BB27A806C4007EE95E /* AllRSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A564BA27A806C4007EE95E /* AllRSSViewController.swift */; };
 		C4A564BD27A808B4007EE95E /* RSSFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A564BC27A808B4007EE95E /* RSSFeedTableViewCell.swift */; };
+		C4A564BF27AA663F007EE95E /* AllSourceXMLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A564BE27AA663F007EE95E /* AllSourceXMLModel.swift */; };
 		C4C2A09727A3CB2700A35962 /* AddSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2A09627A3CB2700A35962 /* AddSourceViewController.swift */; };
 		C4C2A09927A3D24100A35962 /* RSSSourceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2A09827A3D24100A35962 /* RSSSourceModels.swift */; };
 		C4C2A09B27A3D8A500A35962 /* AllSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C2A09A27A3D8A500A35962 /* AllSourcesViewController.swift */; };
@@ -33,9 +34,10 @@
 		C46D17EE279E90F90099C2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C46D17F0279E90F90099C2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46D17FA279E93BB0099C2FB /* parsedNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parsedNewsModels.swift; sourceTree = "<group>"; };
-		C4A564B827A803B5007EE95E /* rssModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rssModel.swift; sourceTree = "<group>"; };
+		C4A564B827A803B5007EE95E /* XMLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLModel.swift; sourceTree = "<group>"; };
 		C4A564BA27A806C4007EE95E /* AllRSSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRSSViewController.swift; sourceTree = "<group>"; };
 		C4A564BC27A808B4007EE95E /* RSSFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedTableViewCell.swift; sourceTree = "<group>"; };
+		C4A564BE27AA663F007EE95E /* AllSourceXMLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSourceXMLModel.swift; sourceTree = "<group>"; };
 		C4C2A09627A3CB2700A35962 /* AddSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceViewController.swift; sourceTree = "<group>"; };
 		C4C2A09827A3D24100A35962 /* RSSSourceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSSourceModels.swift; sourceTree = "<group>"; };
 		C4C2A09A27A3D8A500A35962 /* AllSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSourcesViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +96,8 @@
 			children = (
 				C46D17FA279E93BB0099C2FB /* parsedNewsModels.swift */,
 				C4C2A09827A3D24100A35962 /* RSSSourceModels.swift */,
-				C4A564B827A803B5007EE95E /* rssModel.swift */,
+				C4A564B827A803B5007EE95E /* XMLModel.swift */,
+				C4A564BE27AA663F007EE95E /* AllSourceXMLModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,9 +175,10 @@
 			files = (
 				C46D17E7279E90F80099C2FB /* ViewController.swift in Sources */,
 				C4C2A09727A3CB2700A35962 /* AddSourceViewController.swift in Sources */,
+				C4A564BF27AA663F007EE95E /* AllSourceXMLModel.swift in Sources */,
 				C46D17E3279E90F80099C2FB /* AppDelegate.swift in Sources */,
 				C46D17E5279E90F80099C2FB /* SceneDelegate.swift in Sources */,
-				C4A564B927A803B5007EE95E /* rssModel.swift in Sources */,
+				C4A564B927A803B5007EE95E /* XMLModel.swift in Sources */,
 				C4C2A09B27A3D8A500A35962 /* AllSourcesViewController.swift in Sources */,
 				C46D17FB279E93BB0099C2FB /* parsedNewsModels.swift in Sources */,
 				C4C2A09927A3D24100A35962 /* RSSSourceModels.swift in Sources */,

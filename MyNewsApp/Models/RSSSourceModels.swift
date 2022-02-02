@@ -18,7 +18,7 @@ class RssSources {
         var urlRss: String
     }
     
-    var sources: [UserSource] {
+    public var sources: [UserSource] {
         get {
             if let data = try? defaults.value(forKey: "sources") as? Data {
                 return try! PropertyListDecoder().decode([UserSource].self, from: data)
@@ -40,14 +40,14 @@ class RssSources {
     
     func deleteSource(indexPath: Int) -> Void {
         sources.remove(at: indexPath)
-        defaults.synchronize()
+        //defaults.synchronize()
     }
     
     func editSource(indexPath: Int, sN: String, uR: String) -> Void {
         sources.remove(at: indexPath)
         let tmp = UserSource(sourceName: sN, urlRss: uR)
         sources.insert(tmp, at: indexPath)
-        defaults.synchronize()
+        //defaults.synchronize()
     }
     
     func getAllSources() -> [UserSource] {

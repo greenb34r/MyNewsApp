@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-136" y="-242"/>
         </scene>
-        <!--Add Source View Controller-->
+        <!--Add source-->
         <scene sceneID="DIq-b5-nDO">
             <objects>
                 <viewController storyboardIdentifier="AddSourceViewController" id="kmt-Ca-Hob" customClass="AddSourceViewController" customModule="MyNewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -209,7 +209,7 @@
                             <constraint firstItem="3Rl-71-rPL" firstAttribute="centerX" secondItem="jjb-xd-v6Q" secondAttribute="centerX" id="Oex-p4-qd5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="glU-SH-vh7"/>
+                    <navigationItem key="navigationItem" title="Add source" id="glU-SH-vh7"/>
                     <connections>
                         <outlet property="sourceNameTextField" destination="8QA-y3-zEp" id="MEy-tb-WLQ"/>
                         <outlet property="urlRssTextField" destination="m0x-zh-Ehh" id="kPy-r3-2cn"/>
@@ -300,7 +300,7 @@
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="-928.125"/>
         </scene>
-        <!--All Sources View Controller-->
+        <!--List of sources-->
         <scene sceneID="S5F-4F-kpV">
             <objects>
                 <viewController storyboardIdentifier="AllSourcesViewController" id="3eY-QF-auo" customClass="AllSourcesViewController" customModule="MyNewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -322,7 +322,7 @@
                             <constraint firstItem="9Qp-s5-EqA" firstAttribute="top" secondItem="Y29-iU-DSi" secondAttribute="top" id="htA-g7-Shh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="suZ-ww-mIl">
+                    <navigationItem key="navigationItem" title="List of sources" id="suZ-ww-mIl">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="z2j-Ug-5RC">
                             <connections>
                                 <segue destination="kmt-Ca-Hob" kind="show" id="upa-19-Cuh"/>
@@ -338,7 +338,7 @@
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="-1605.1339285714284"/>
         </scene>
-        <!--Edit Source View Controller-->
+        <!--Edit or delete source-->
         <scene sceneID="Pwy-RN-yDX">
             <objects>
                 <viewController storyboardIdentifier="EditSourceViewController" id="hbq-Pk-ReF" customClass="EditSourceViewController" customModule="MyNewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -476,7 +476,7 @@
                             <constraint firstItem="RTc-kW-C6W" firstAttribute="centerY" secondItem="Z1g-3d-yqV" secondAttribute="centerY" constant="-198" id="ovo-SY-jyt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="o3l-Sv-d5Y"/>
+                    <navigationItem key="navigationItem" title="Edit or delete source" id="o3l-Sv-d5Y"/>
                     <connections>
                         <outlet property="editSourceNameTextField" destination="rNg-Cg-YtV" id="Db4-2i-4hv"/>
                         <outlet property="editUrlRssTextField" destination="NSN-4s-qht" id="1Fu-tk-KVO"/>
@@ -507,7 +507,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iqN-tA-cTa"/>
+        <segue reference="upa-19-Cuh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark.circle" catalog="system" width="128" height="121"/>
