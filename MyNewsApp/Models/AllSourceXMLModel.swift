@@ -34,8 +34,6 @@ class ListItemsForRssHandler {
 
     func addToList() {
         var i = 0
-        
-        //rssItems = []
         listItemsRssArray = []
         
         print(allSources.count)
@@ -45,7 +43,6 @@ class ListItemsForRssHandler {
             listItemsForRss = ListItemsForRss(identifire: i, nameSource: allSources[i].sourceName, urlSource: allSources[i].urlRss, listItems: self.rssItemsFromSource)
 
             listItemsRssArray.append(listItemsForRss!)
-            //print(listItemsRssArray)
 
             i += 1
         }
